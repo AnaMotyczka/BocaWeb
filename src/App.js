@@ -18,7 +18,7 @@ class App extends Component{
 
   carregaODAs(){
     const{busca} = this.state;
-    fetch('http://www.bocaweb.com.br/apibocaweb?nome='+busca)
+    fetch('https://www.bocaweb.com.br/apibocaweb?nome='+busca)
     .then(response => response.json())
     .then(odas => this.setState({odas}))
   }
@@ -29,7 +29,7 @@ class App extends Component{
   }
 
   render(){
-    const {busca, odas} = this.state;
+    const {odas} = this.state;
     return (
       <section className ="container">
         <div>
